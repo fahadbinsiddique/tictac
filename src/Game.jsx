@@ -131,6 +131,18 @@ const Game = () => {
           </ol>
         </div>
       </div>
+
+      <footer className="mt-16 text-center">
+        <p className="text-gray-500 text-sm tracking-wide">
+          Developed with ❤️ by
+          <span className="font-bold text-gray-800 hover:text-blue-600 transition-colors cursor-default">
+            Fahad Bin Siddique
+          </span>
+        </p>
+        <p className="text-xs text-gray-400 mt-1">
+          © {new Date().getFullYear()} All Rights Reserved
+        </p>
+      </footer>
     </div>
   );
 };
