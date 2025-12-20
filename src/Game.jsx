@@ -96,19 +96,40 @@ const Game = () => {
       description = move > 0 ? `Go to move #${move}` : "Reset / Start Game";
     }
     return (
-      <li key={move} className="bg-gray-700 text-white mb-1 p-1 rounded-sm">
-        <button onClick={() => jumpTo(move)}>{description}</button>
+      <li key={move} className="bg-gray-700  text-white mb-1 p-1 rounded-sm">
+        <button
+          className="cursor-pointer hover:text-blue-200"
+          onClick={() => jumpTo(move)}
+        >
+          {description}
+        </button>
       </li>
     );
   });
 
   return (
-    <div className="flex justify-center p-4">
-      <div className="mr-16">
-        <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
-      </div>
-      <div>
-        <ol className="border border-gray-400 p-1 text-lg">{moves}</ol>
+    <div className=" bg-gray-50 flex flex-col items-center  justify-center p-6 font-sans">
+      <h1 className="text-4xl font-black text-gray-800 mb-10 tracking-tight">
+        Tic Tac <span className="text-blue-600">Toe</span>
+      </h1>
+
+      <div className="flex flex-col md:flex-row gap-12 items-start justify-center">
+        <div className="w-full max-w-xs">
+          <Board
+            xIsNext={xIsNext}
+            squares={currentSquares}
+            onPlay={handlePlay}
+          />
+        </div>
+
+        <div className="w-full max-w-xs">
+          <h2 className="text-lg font-bold text-gray-600 mb-4 ml-1">
+            Match History
+          </h2>
+          <ol className="h-80 overflow-y-auto pr-2   custom-scrollbar">
+            {moves}
+          </ol>
+        </div>
       </div>
     </div>
   );
