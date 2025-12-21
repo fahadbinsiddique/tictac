@@ -8,9 +8,11 @@
 import { useState } from "react";
 
 const Square = ({ value, onSquarClick }) => {
+  const textColor = value === "X" ? "text-blue-600" : "text-rose-500";
   return (
     <button
-      className="bg-white border cursor-pointer border-gray-400 font-bold text-black h-12 w-12 m-1 leading-9 text-lg"
+      className={`bg-gray-50 border-2 border-gray-200 cursor-pointer font-black h-16 w-16 m-1 
+      text-2xl rounded-lg shadow-sm transition-all hover:bg-blue-50 hover:border-blue-300 active:scale-90 ${textColor}`}
       onClick={onSquarClick}
     >
       {value}
@@ -91,7 +93,7 @@ const Game = () => {
     if (move > 0) {
       description = `Go To The move # ${move}`;
     } else {
-      description = `Go To Start the Game`;
+      description = move > 0 ? `Go to move #${move}` : "Reset / Start Game";
     }
     return (
       <li key={move} className="bg-gray-700 text-white mb-1 p-1 rounded-sm">
