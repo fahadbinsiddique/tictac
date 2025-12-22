@@ -27,12 +27,12 @@ const Board = ({ xIsNext, squares, onPlay }) => {
   if (winner) {
     status = `Winner:${winner}`;
     statusClass += "text-green-600";
-  } else if (isDraw){
+  } else if (isDraw) {
     status = "Game Draw!";
     statusClass += "text-orange-500";
-  }else{
+  } else {
     status = "Next Player " + (xIsNext ? "X" : "Y");
-
+    statusClass += "text-gray-700";
   }
 
   function handClick(index) {
@@ -49,7 +49,7 @@ const Board = ({ xIsNext, squares, onPlay }) => {
   }
   return (
     <>
-      <div>{status}</div>
+      <div className={statusClass}>{status}</div>
       <div className="flex">
         <Square value={squares[0]} onSquarClick={() => handClick(0)} />
         <Square value={squares[1]} onSquarClick={() => handClick(1)} />
