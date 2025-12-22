@@ -20,6 +20,7 @@ const Square = ({ value, onSquarClick }) => {
 
 const Board = ({ xIsNext, squares, onPlay }) => {
   const winner = calculateWinner(squares);
+  const isDraw = !winner && squares.every((square) => square !== null);
 
   let status;
   let statusClass = "mb-4 font-bold text-xl ";
