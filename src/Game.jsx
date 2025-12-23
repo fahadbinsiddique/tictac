@@ -26,8 +26,12 @@ const Board = ({ xIsNext, squares, onPlay }) => {
   if (winner) {
     status = `Winner:${winner}`;
     statusClass += "text-green-600";
-  } else {
+  } else if (isDraw){
+    status = "Game Draw!";
+    statusClass += "text-orange-500";
+  }else{
     status = "Next Player " + (xIsNext ? "X" : "Y");
+
   }
 
   function handClick(index) {
