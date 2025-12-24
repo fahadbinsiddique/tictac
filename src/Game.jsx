@@ -25,6 +25,7 @@ const Board = ({ xIsNext, squares, onPlay }) => {
   let statusClass = "mb-4 font-bold text-xl ";
   if (winner) {
     status = `Winner:${winner}`;
+    statusClass += "text-green-600";
   } else {
     status = "Next Player " + (xIsNext ? "X" : "Y");
   }
