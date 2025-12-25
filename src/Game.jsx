@@ -22,7 +22,7 @@ const Board = ({ xIsNext, squares, onPlay }) => {
   const winner = calculateWinner(squares);
 
   let status;
-
+  let statusClass = "mb-4 font-bold text-xl ";
   if (winner) {
     status = `Winner:${winner}`;
   } else {
