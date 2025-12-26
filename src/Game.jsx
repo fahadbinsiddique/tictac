@@ -100,7 +100,7 @@ const Game = () => {
         <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
       </div>
       <div>
-        <ol>{moves}</ol>
+        <ol className="border border-gray-400 p-1 text-lg">{moves}</ol>
       </div>
     </div>
   );
