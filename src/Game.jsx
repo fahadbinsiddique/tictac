@@ -5,7 +5,6 @@
     -> Hostory
 */
 
-
 import { useState } from "react";
 
 const Square = ({ value, onSquarClick }) => {
@@ -89,16 +88,15 @@ const Game = () => {
       description = `Go To Start the Game`;
     }
     return (
-      <li key={move}
-       className="bg-gray-700 text-white mb-1 p-1 rounded-sm">
+      <li key={move} className="bg-gray-700 text-white mb-1 p-1 rounded-sm">
         <button onClick={() => jumpTo(move)}>{description}</button>
       </li>
     );
   });
 
   return (
-    <div>
-      <div>
+    <div className="flex justify-center p-4">
+      <div className="mr-16">
         <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
       </div>
       <div>
