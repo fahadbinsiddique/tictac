@@ -16,15 +16,13 @@ const Board = () => {
   const [xIsNext, setXIsNext] = useState(true);
 
   const winner = calculateWinner(squares);
-  console.log(winner);
-  
-  let status;
 
+  let status;
 
   if (winner) {
     status = `Winner:${winner}`;
   } else {
-    status = "Next Player " +  (xIsNext ? "X" : "Y");
+    status = "Next Player " + (xIsNext ? "X" : "Y");
   }
 
   function handClick(index) {
@@ -42,7 +40,7 @@ const Board = () => {
   }
   return (
     <>
-    <div>{status}</div>
+      <div>{status}</div>
       <div className="flex">
         <Square value={squares[0]} onSquarClick={() => handClick(0)} />
         <Square value={squares[1]} onSquarClick={() => handClick(1)} />
@@ -62,7 +60,22 @@ const Board = () => {
   );
 };
 
-export default Board;
+
+
+
+
+
+
+
+const Game = () => {
+  return (
+    <div>
+      <div><Board/></div>
+    </div>
+  );
+};
+
+export default Game;
 
 function calculateWinner(squares) {
   const lines = [
