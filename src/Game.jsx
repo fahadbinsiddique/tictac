@@ -71,6 +71,7 @@ const Game = () => {
   return (
     <div>
       <div><Board/></div>
+      <div><ol>{/*TBD*/}</ol></div>
     </div>
   );
 };
