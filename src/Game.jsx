@@ -70,7 +70,7 @@ const Game = () => {
   const [history, setHistory] = useState([Array(9).fill(null)]);
   const [xIsNext, setXIsNext] = useState(true);
 
-  
+  const currentSquares = history[history.length-1]
   return (
     <div>
       <div><Board/></div>
