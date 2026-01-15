@@ -12,8 +12,6 @@ const Square = ({ value, onSquarClick }) => {
 };
 
 const Board = () => {
-  
-
   const winner = calculateWinner(squares);
 
   let status;
@@ -59,27 +57,22 @@ const Board = () => {
   );
 };
 
-
-
-
-
-
-
-
 const Game = () => {
   const [history, setHistory] = useState([Array(9).fill(null)]);
   const [xIsNext, setXIsNext] = useState(true);
 
-  const currentSquares = history[history.length-1]
+  const currentSquares = history[history.length - 1];
 
-  function handlePlay(nextSquares) {
-    
-  }
+  function handlePlay(nextSquares) {}
 
   return (
     <div>
-      <div><Board/></div>
-      <div><ol>{/*TBD*/}</ol></div>
+      <div>
+        <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
+      </div>
+      <div>
+        <ol>{/*TBD*/}</ol>
+      </div>
     </div>
   );
 };
