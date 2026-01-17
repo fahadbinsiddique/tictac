@@ -32,8 +32,7 @@ const Board = ({xIsNext,squares,onPlay}) => {
     } else {
       nextSquares[index] = "O";
     }
-    setSquares(nextSquares);
-    setXIsNext(!xIsNext);
+   
   }
   return (
     <>
