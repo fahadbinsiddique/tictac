@@ -11,7 +11,7 @@ const Square = ({ value, onSquarClick }) => {
   );
 };
 
-const Board = ({xIsNext,squares,onPlay}) => {
+const Board = ({ xIsNext, squares, onPlay }) => {
   const winner = calculateWinner(squares);
 
   let status;
@@ -32,7 +32,7 @@ const Board = ({xIsNext,squares,onPlay}) => {
     } else {
       nextSquares[index] = "O";
     }
-   
+    onPlay(nextSquares);
   }
   return (
     <>
