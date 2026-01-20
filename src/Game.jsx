@@ -67,13 +67,27 @@ const Game = () => {
     setHistory([...history, nextSquares]);
   }
 
+  const moves = history.map((squares, move) => {
+    let description;
+    if (move > 0) {
+      description = `Go To The move # ${move}`;
+    } else {
+      description = `Go To Start the Game`;
+    }
+    return (
+      <li>
+        <button>{description}</button>
+      </li>
+    );
+  });
+
   return (
     <div>
       <div>
         <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
       </div>
       <div>
-        <ol>{/*TBD*/}</ol>
+        <ol>{moves}</ol>
       </div>
     </div>
   );
