@@ -75,7 +75,7 @@ const Game = () => {
       description = `Go To Start the Game`;
     }
     return (
-      <li>
+      <li key={move}>
         <button>{description}</button>
       </li>
     );
