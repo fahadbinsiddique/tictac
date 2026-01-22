@@ -59,6 +59,7 @@ const Board = ({ xIsNext, squares, onPlay }) => {
 const Game = () => {
   const [history, setHistory] = useState([Array(9).fill(null)]);
   const [xIsNext, setXIsNext] = useState(true);
+  const [currentMove, setCurrentMove] = useState(0);
 
   const currentSquares = history[history.length - 1];
 
@@ -66,7 +67,10 @@ const Game = () => {
     setXIsNext(!xIsNext);
     setHistory([...history, nextSquares]);
   }
+  function jumpTo(move) {
 
+    
+  }
   const moves = history.map((squares, move) => {
     let description;
     if (move > 0) {
@@ -76,7 +80,7 @@ const Game = () => {
     }
     return (
       <li key={move}>
-        <button>{description}</button>
+        <button onClick={() => jumpTo(move)}>{description}</button>
       </li>
     );
   });
