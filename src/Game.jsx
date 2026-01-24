@@ -69,6 +69,7 @@ const Game = () => {
   }
   function jumpTo(move) {
     setCurrentMove(move);
+    setXIsNext(move % 2 === 0);
   }
   const moves = history.map((squares, move) => {
     let description;
