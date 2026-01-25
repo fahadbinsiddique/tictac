@@ -66,7 +66,7 @@ const Game = () => {
   function handlePlay(nextSquares) {
     setXIsNext(!xIsNext);
     const nextHistory = [...history.slice(0, currentMove + 1), nextSquares];
-    setHistory([...history, nextSquares]);
+    setHistory(nextHistory);
   }
   function jumpTo(move) {
     setCurrentMove(move);
