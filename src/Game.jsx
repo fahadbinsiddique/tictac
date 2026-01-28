@@ -61,7 +61,7 @@ const Game = () => {
   const [xIsNext, setXIsNext] = useState(true);
   const [currentMove, setCurrentMove] = useState(0);
 
-  const currentSquares = history[history.length - 1];
+  const currentSquares = history[currentMove];
 
   function handlePlay(nextSquares) {
     setXIsNext(!xIsNext);
