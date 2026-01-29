@@ -1,3 +1,11 @@
+/*
+   Game
+    -> Board
+        -> Square
+    -> Hostory
+*/
+
+
 import { useState } from "react";
 
 const Square = ({ value, onSquarClick }) => {
