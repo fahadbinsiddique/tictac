@@ -134,7 +134,7 @@ const Game = () => {
 
       <footer className="mt-16 text-center">
         <p className="text-gray-500 text-sm tracking-wide">
-          Developed with ❤️ by
+          Developed with ❤️❤️ by
           <span className="font-bold text-gray-800 hover:text-blue-600 transition-colors cursor-default">
             Fahad Bin Siddique
           </span>
